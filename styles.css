@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
   }
   
   body {
@@ -46,7 +47,7 @@
     color: #2d2d2d;
     cursor: pointer;
     font-size: 17px;
-    font-weight: 400;
+    font-weight: 700;
     text-decoration: none;
   }
   
