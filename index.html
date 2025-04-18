@@ -6,13 +6,15 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
 </head>
 <body>
     <div class="portfolio29">
         <!-- Header Section -->
         <header class="header">
-          <h1 class="logo">Anupam Suthar</h1>
+          <a href="#about" id="name-logo"><h1 class="logo">Anupam Suthar</h1></a>
           <nav class="navigation">
             <a href="#about" class="nav-link">About</a>
             <a href="#work" class="nav-link">Work</a>
@@ -131,8 +133,12 @@
                   <img src="assets/Client Image.png" alt="client-image">       
                 </div>
                 <div class="author-info">
-                  <div class="stars">
-                    <img src="assets/Stars.png" alt="stars">
+                  <div class="stars star-rating">
+                    <i class="fa-regular fa-star" data-value="1"></i>
+                    <i class="fa-regular fa-star" data-value="2"></i>
+                    <i class="fa-regular fa-star" data-value="3"></i>
+                    <i class="fa-regular fa-star" data-value="4"></i>
+                    <i class="fa-regular fa-star" data-value="5"></i>
                   </div>
                   <h3 class="author-name">Gemma Nolen</h3>
                   <p class="company">Google</p>
@@ -147,8 +153,12 @@
                   <img src="assets/Client Image.png" alt="client-image">       
                 </div>
                 <div class="author-info">
-                  <div class="stars">
-                    <img src="assets/Stars.png" alt="stars">
+                  <div class="stars star-rating">
+                    <i class="fa-regular fa-star" data-value="1"></i>
+                    <i class="fa-regular fa-star" data-value="2"></i>
+                    <i class="fa-regular fa-star" data-value="3"></i>
+                    <i class="fa-regular fa-star" data-value="4"></i>
+                    <i class="fa-regular fa-star" data-value="5"></i>
                   </div>
                   <h3 class="author-name">Gemma Nolen</h3>
                   <p class="company">Google</p>
@@ -163,8 +173,12 @@
                   <img src="assets/Client Image.png" alt="client-image">       
                 </div>
                 <div class="author-info">
-                  <div class="stars">
-                    <img src="assets/Stars.png" alt="stars">
+                  <div class="stars star-rating">
+                    <i class="fa-regular fa-star" data-value="1"></i>
+                    <i class="fa-regular fa-star" data-value="2"></i>
+                    <i class="fa-regular fa-star" data-value="3"></i>
+                    <i class="fa-regular fa-star" data-value="4"></i>
+                    <i class="fa-regular fa-star" data-value="5"></i>
                   </div>
                   <h3 class="author-name">Gemma Nolen</h3>
                   <p class="company">Google</p>
@@ -179,8 +193,12 @@
                   <img src="assets/Client Image.png" alt="client-image">       
                 </div>
                 <div class="author-info">
-                  <div class="stars">
-                    <img src="assets/Stars.png" alt="stars">
+                  <div class="stars star-rating">
+                    <i class="fa-regular fa-star" data-value="1"></i>
+                    <i class="fa-regular fa-star" data-value="2"></i>
+                    <i class="fa-regular fa-star" data-value="3"></i>
+                    <i class="fa-regular fa-star" data-value="4"></i>
+                    <i class="fa-regular fa-star" data-value="5"></i>
                   </div>
                   <h3 class="author-name">Gemma Nolen</h3>
                   <p class="company">Google</p>
@@ -195,8 +213,12 @@
                   <img src="assets/Client Image.png" alt="client-image">       
                 </div>
                 <div class="author-info">
-                  <div class="stars">
-                    <img src="assets/Stars.png" alt="stars">
+                  <div class="stars star-rating">
+                    <i class="fa-regular fa-star" data-value="1"></i>
+                    <i class="fa-regular fa-star" data-value="2"></i>
+                    <i class="fa-regular fa-star" data-value="3"></i>
+                    <i class="fa-regular fa-star" data-value="4"></i>
+                    <i class="fa-regular fa-star" data-value="5"></i>
                   </div>
                   <h3 class="author-name">Gemma Nolen</h3>
                   <p class="company">Google</p>
@@ -211,8 +233,12 @@
                   <img src="assets/Client Image.png" alt="client-image">       
                 </div>
                 <div class="author-info">
-                  <div class="stars">
-                    <img src="assets/Stars.png" alt="stars">
+                  <div class="stars star-rating">
+                    <i class="fa-regular fa-star" data-value="1"></i>
+                    <i class="fa-regular fa-star" data-value="2"></i>
+                    <i class="fa-regular fa-star" data-value="3"></i>
+                    <i class="fa-regular fa-star" data-value="4"></i>
+                    <i class="fa-regular fa-star" data-value="5"></i>
                   </div>
                   <h3 class="author-name">Gemma Nolen</h3>
                   <p class="company">Google</p>
@@ -243,52 +269,24 @@
             </div>
           </div>
           <div class="details-form">
-            <form class="forms">
+            <form class="forms" id="userForm">
               <div class="input-grps">
-                <input type="text" placeholder="Name" class="input">
-                <input type="email" placeholder="Email" class="input">
-                <input type="number" placeholder="Phone Number" class="input">
-                <textarea placeholder="description" class="input" rows="3" cols="3"></textarea>
+                <input type="text" placeholder="Name" id="name" class="input" required minlength="3" maxlength="20">
+                <input type="email" placeholder="Email" id="email" class="input">
+                <input type="tel" placeholder="Phone Number" id="number" class="input" pattern="\d{10}" maxlength="10">
+                <textarea placeholder="description" id="description" class="input" rows="3" cols="3"></textarea>
               </div>
               <button type="submit" class="Submit-btn">Sumbit</button>
             </form>
+            <div id="toast">✅ Submitted Successfully!</div>
           </div>
         </div>
       </section>
-
       </div>
 
-      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <!-- Swiper Init Script -->
-  <script>
-    const swiper = new Swiper(".mySwiper", {
-      slidesPerView: 3,
-      spaceBetween: 24,
-      loop: true,
-      grabCursor: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-
-      breakpoints: {
-        0: {
-          slidesPerView: 1
-        },
-        768: {
-          slidesPerView: 2
-        },
-        1024: {
-          slidesPerView: 3
-        }
-      }
-    });
-  </script>
-  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="modules/swiper.js"></script>
+  <script src="modules/firebase_connection.js" type="module" ></script>
+  <script src="modules/main.js"></script>
   </body>
 </html>

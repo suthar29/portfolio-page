@@ -1,3 +1,4 @@
+
 const projects = [
   {
     title: "Library Solutions",
@@ -43,10 +44,26 @@ const projects = [
   }
 ];
 
+const stars = document.querySelectorAll('.star-rating i');
+  const ratingInput = document.getElementById('ratingValue');
+
+  stars.forEach((star, index) => {
+    star.addEventListener('click', () => {
+      let rating = star.getAttribute('data-value');
+      ratingInput.value = rating;
+
+      stars.forEach((s, i) => {
+        s.classList.toggle('fa-solid', i < rating);
+        s.classList.toggle('fa-regular', i >= rating);
+        s.classList.toggle('selected', i < rating);
+      });
+    });
+  });
+
 const container = document.getElementById("projects-container");
 
 container.innerHTML = projects.map(project => `
-  <article class="project-card">
+  <div class="project-card">
     <img src="${project.image}" alt="Project" class="project-image" />
     <div class="project-info">
       <h3 class="project-title">${project.title}</h3>
@@ -56,5 +73,5 @@ container.innerHTML = projects.map(project => `
         <a href="${project.live}" target="_blank" class="live">LIVE LINK</a>
       </div> 
     </div>
-  </article>
+  </div>
 `);

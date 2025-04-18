@@ -10,6 +10,7 @@ body {
   line-height: 1.5;
 }
 
+
 /* Header */
 .header {
   background-color: #fff;
@@ -21,7 +22,9 @@ body {
   flex-wrap: wrap;
 }
 
-.logo {
+
+#name-logo{
+  text-decoration: none;
   color: #2d2d2d;
   font-size: 20px;
   font-weight: 700;
@@ -36,7 +39,7 @@ body {
 .nav-link {
   color: #2d2d2d;
   cursor: pointer;
-  font-size: 17px;
+  font-size: 1.5rem;
   font-weight: 700;
   text-decoration: none;
 }
@@ -45,7 +48,7 @@ body {
 .hero {
   background-color: #fff;
   flex-wrap: wrap;
-  max-width: 1280px;
+  /*max-width: 1280px;*/
   justify-content: center;
   align-items: center;
   gap: 68px;
@@ -83,8 +86,8 @@ body {
 
 .description {
   color: #2d2d2d;
-  font-size: 17px;
-  font-weight: 400;
+  font-size: 1.2rem;
+  font-weight: 500;
   line-height: 27px;
 }
 
@@ -95,6 +98,7 @@ body {
   padding: 24px 64px;
   font-size: 20px;
   font-weight: 700;
+  text-align: center;
   border: none;
   text-decoration: none;
 }
@@ -182,12 +186,12 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
- /* justify-content: center;*/
+ justify-content: center;
 }
 
 .project-card {
   flex-direction: column;
-  flex: 1;
+  flex: 0 0 calc(31% - 14px);
   gap: 24px;
   min-width: 320px;
   display: flex;
@@ -290,6 +294,19 @@ body {
     gap: 6px;
   }
 
+  .star-rating i {
+    font-size: 24px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+
+  .star-rating i.selected,
+  .star-rating i:hover,
+  .star-rating i:hover ~ i {
+    color: gold;
+  }
+
   .author-name {
     color: #2d2d2d;
     font-size: 20px;
@@ -323,7 +340,7 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 60px;
 }
 
 .info {
@@ -334,7 +351,7 @@ body {
 }
 
 .contact-des {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   /*margin-bottom: 20px;*/
 }
@@ -398,7 +415,31 @@ gap: 24px;
 }
 
 .Submit-btn:hover {
-  background-color: #0056b3;
+  background-color: #46c97c;
+  color: black;
+}
+
+ /* Toast Style */
+ #toast {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #4caf50;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 12px;
+  position: fixed;
+  z-index: 100;
+  right: 30px;
+  bottom: 30px;
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.4s ease, visibility 0.4s;
+}
+
+#toast.show {
+  visibility: visible;
+  opacity: 1;
 }
 
 
