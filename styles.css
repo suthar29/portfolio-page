@@ -288,7 +288,7 @@ body {
     flex-direction: column;
     gap: 11px;
   }
-
+/*
   .stars {
     display: flex;
     gap: 6px;
@@ -305,6 +305,22 @@ body {
   .star-rating i:hover,
   .star-rating i:hover ~ i {
     color: gold;
+  }*/
+
+  .star-rating {
+    display: inline-block;
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    font-size: 2rem;
+  }
+
+  .star-rating > span {
+    color: lightgray;
+    pointer-events: none; /* Optional: disables hover or click */
+  }
+
+  .star-rating > .filled {
+    color: rgb(69, 69, 68);
   }
 
   .author-name {
