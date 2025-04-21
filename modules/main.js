@@ -44,22 +44,6 @@ const projects = [
   }
 ];
 
-const stars = document.querySelectorAll('.star-rating i');
-  const ratingInput = document.getElementById('ratingValue');
-
-  stars.forEach((star, index) => {
-    star.addEventListener('click', () => {
-      let rating = star.getAttribute('data-value');
-      ratingInput.value = rating;
-
-      stars.forEach((s, i) => {
-        s.classList.toggle('fa-solid', i < rating);
-        s.classList.toggle('fa-regular', i >= rating);
-        s.classList.toggle('selected', i < rating);
-      });
-    });
-  });
-
 const container = document.getElementById("projects-container");
 
 container.innerHTML = projects.map(project => `
