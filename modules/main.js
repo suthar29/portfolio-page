@@ -58,4 +58,4 @@ container.innerHTML = projects.map(project => `
       </div> 
     </div>
   </div>
-`);
+`).join("");

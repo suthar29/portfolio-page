@@ -36,7 +36,7 @@ function showToast(msg) {
 
 
 // 💌 Brevo API Key — ⚠️ WARNING: Do NOT expose this in production!
-const BREVO_API_KEY = "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";
+const BREVO_API_KEY = "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";
 const YOUR_EMAIL = "anupamsuthar329@gmail.com"; // Email to receive form notifications
 
 form.addEventListener('submit', async (e) => {
@@ -72,7 +72,7 @@ const notifyAdminEmail = {
     <h2>New Message</h2>
     <p><strong>Name:</strong> ${name}</p>
     <p><strong>Email:</strong> ${email}</p>
-    <p><strong>Contact:</strong> ${email}</p>
+    <p><strong>Contact:</strong> ${mobile_number}</p>
     <p><strong>Message:</strong> ${description}</p>
   `,
 };
@@ -94,7 +94,7 @@ try {
     const res = await fetch("https://api.brevo.com/v3/smtp/email", {
       method: "POST",
       headers: {
-        "api-key": "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",
+        "api-key": "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",
         "Content-Type": "application/json",
       },
       body: JSON.stringify(payload),
